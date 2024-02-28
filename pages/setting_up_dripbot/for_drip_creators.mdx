@@ -1,0 +1,48 @@
+# For DRiP Creators
+
+## Inviting Bot
+
+Inviting DRiPBot to Your Server : 
+
+Go to [Official Website]('https://github.com/simplysabir) and Click on Invite Bot and follow the prompted steps. The bot will require admin permissions.
+
+## Configuring Your Server
+
+Once DRiPBot is successfully added to your Discord server, the next step is to configure it to recognize the Drip NFT creator's wallet address. This is crucial for the bot to verify the ownership of NFTs against the specific collection you want to gate access to.
+
+### Setting the Creator Address : 
+
+The `/setcreator` command allows server administrators to define the Solana wallet address associated with the Drip NFT collection. This address is used by DRiPBot to verify the ownership of NFTs within the server.
+
+**Command Usage**: `/setcreator` wallet_address=CREATOR_WALLET_ADDRESS
+
+**Example**: `/setcreator` wallet_address=3dW...Hg9
+
+**Description**: Sets the Solana wallet address of the Drip NFT creator. This address will be used by DRiPBot to verify if the server members own NFTs from this creator.
+
+**Parameters**:
+- `wallet_address`: The Solana wallet address of the Drip NFT creator.
+
+**Admin Only**: Yes. This command can only be used by members with administrative privileges on the server.
+
+By setting the creator address, you ensure that DRiPBot has a reference point for verifying NFT ownership. This is the first step in automating access control based on NFT ownership and is critical for maintaining the exclusivity of certain server areas or roles.
+
+### Setting Eligibility Criteria :
+
+**Command**: `/setcriteria`
+
+**Parameters**:
+
+- **rarity**: The rarity level of NFTs required for access (e.g., common, rare, legendary).
+
+- **amount**: The minimum number of NFTs a collector must hold.
+
+**Example**: `/setcriteria` ```select raity and amount```
+
+**Description**: This command configures the bot to grant access only to users who own at least 5 legendary Drip NFTs.
+
+you can customize it depending upon your need.
+
+## Automating Access Control : 
+
+DRiPBot periodically checks each server member's linked Solana wallet for NFTs that meet the set criteria. Members who qualify are automatically granted access channels.

@@ -1,0 +1,15 @@
+`setcreator`
+
+**Purpose**: Specifies the Solana wallet address of the Drip NFT creator for the server. This address is used by DRiPBot for verifying the ownership of NFTs against this particular creator's collection.
+
+**Usage**: `/setcreator` wallet_address=CREATOR_WALLET_ADDRESS
+
+**Parameters**:
+
+- address: The Solana wallet address of the Drip NFT creator.
+
+**Example**: `/setcreator` wallet_address=3dWCZ5...E9Hg9
+
+**Admin Only**: Yes. This command requires administrative rights to be executed.
+
+**Description**: This command is the first step in configuring DRiPBot on your server. By setting the creator's wallet address, you ensure DRiPBot has the necessary reference to verify the ownership of Drip NFTs. This setup is critical for gating access to exclusive content based on NFT ownership.
